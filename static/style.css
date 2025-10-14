@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #2b73d7;
+    --accent-color: #A36B3B;
+    --text-color: #333;
+    --background-light: #f4f7f6;
+    --background-white: #ffffff;
+    --border-color: #e0e0e0;
+    --font-family-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+html { 
+    font-family: var(--font-family-sans); 
+    background: var(--background-light); 
+    padding: 2rem;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body { 
+    max-width: 1000px;
+    margin: 0 auto; 
+    background: var(--background-white);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1 { 
+    font-family: var(--font-family-sans); 
+    color: var(--primary-color); 
+    margin: 1rem 0; 
+    font-weight: 700;
+}
+
+a { 
+    color: var(--accent-color); 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+hr { 
+    border: none; 
+    border-top: 1px solid var(--border-color); 
+    margin: 1rem 0;
+}
+
+nav { 
+    background: var(--primary-color); 
+    color: var(--background-white);
+    display: flex; 
+    align-items: center; 
+    padding: 0 1rem;
+}
+
+nav h1 { 
+    flex: auto; 
+    margin: 0; 
+    font-size: 1.5rem;
+}
+
+nav h1 a { 
+    color: var(--background-white);
+    padding: 0.5rem 0; 
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav ul li a, nav ul li span, header .action { 
+    display: block; 
+    padding: 1rem 0.75rem; 
+    color: var(--background-white);
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(203, 20, 20, 0.1);
+    color: var(--background-white);
+}
+
+.content { 
+    padding: 1.5rem 2rem 2rem; 
+}
+
+.content > header { 
+    border-bottom: 1px solid var(--border-color); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.content > header h1 { 
+    margin: 0.5rem 0 0.5rem 0; 
+}
+
+.flash { 
+    margin: 1.5em 0; 
+    padding: 1em 1.5em; 
+    background: #669ac4;
+    border: 1px solid var(--primary-color); 
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.post {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.post > header { 
+    display: flex; 
+    align-items: center; 
+    font-size: 0.9em;
+    margin-bottom: 0.5rem;
+}
+
+.post > header > div:first-of-type { 
+    flex: auto; 
+}
+
+.post > header h1 { 
+    font-size: 1.6em; 
+    margin: 0;
+}
+
+.post .about { 
+    color: #105da0; 
+    font-style: normal;
+    font-size: 0.85em;
+    margin-left: 1rem;
+}
+
+.post .body { 
+    white-space: pre-line; 
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.content form { 
+    margin: 2em 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem;
+}
+
+.content label { 
+    font-weight: 600; 
+    margin-bottom: -0.5em;
+    color: var(--primary-color);
+}
+
+.content input:not([type=checkbox]):not([type=submit]), .content textarea { 
+    padding: 0.75rem 1rem; 
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.content input:focus, .content textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(163, 107, 59, 0.2);
+}
+
+.content textarea { 
+    min-height: 15em; 
+    resize: vertical; 
+}
+
+input.danger { 
+    background: #ffeded;
+    color: #cc2f2e; 
+    border: 1px solid #cc2f2e;
+}
+
+input[type=submit] { 
+    align-self: flex-start; 
+    min-width: 12em; 
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+input[type=submit]:hover {
+    background-color: #065be6;
+    transform: translateY(-1px);
+}

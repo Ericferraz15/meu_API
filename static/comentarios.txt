@@ -1,0 +1,31 @@
+Variáveis CSS (Seção :root)
+Variável	Valor/Uso	Função
+--primary-color	#5F7492	Azul/Cinza Elegante, usado em navegação, títulos e botões principais.
+--accent-color	#A36B3B	Cobre Suave, usado para links e elementos de destaque.
+--background-light	#f4f7f6	Cor de fundo geral da tela (cinza muito claro) para "levantar" o corpo principal.
+--shadow-subtle	0 4px 6px rgba(...)	Usado para criar sombras suaves em alguns elementos.
+
+
+
+Seletor	Propriedades Chave	Alterações e Finalidade
+html	font-family, padding	Atualizado para uma fonte sans-serif mais limpa. Aumentado o padding para mais espaço branco (2rem).
+body	max-width: 1000px, border-radius: 12px, box-shadow	O container principal está levemente mais largo. Adicionado border-radius (cantos arredondados) e uma box-shadow mais evidente para dar profundidade.
+h1	font-weight: 700, color: var(--primary-color)	Maior peso de fonte para ênfase e uso da cor primária.
+a	color: var(--accent-color), transition	Links usam a cor de destaque e possuem uma transição suave para o efeito hover.
+
+Seletor	Propriedades Chave	Finalidade
+nav	background: var(--primary-color)	O fundo usa a cor primária, tornando a navegação um bloco sólido e elegante.
+nav ul li a:hover	background-color: rgba(...)	Adiciona um feedback visual discreto (um leve brilho) ao passar o mouse sobre os links.
+nav ul li a	padding: 1rem 0.75rem	Aumentado o padding vertical para dar mais "altura" e respiro à barra de navegação.
+
+Seletor	Propriedades Chave	Finalidade
+.content	padding: 1.5rem 2rem 2rem	Aumentado o espaçamento interno do conteúdo.
+.content > header	justify-content: space-between	Garante que o título e o botão de ação (se houver) fiquem nas extremidades opostas da linha.
+.flash	border-left: 5px solid...	Adiciona uma borda lateral grossa para dar mais destaque visual à mensagem de alerta.
+
+POSTAGENS (.post)
+Seletor	Propriedades Chave	Finalidade
+.post	border-bottom	Mantém o separador sutil entre as postagens.
+.post .about	color: #6c757d, font-style: normal	Remoção do estilo itálico (considerado datado) e uso de uma cor cinza mais neutra para informações secundárias.
+.post .body	line-height: 1.6	Aumenta o espaçamento entre as linhas de texto para melhorar a legibilidade.
+
