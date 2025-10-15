@@ -48,9 +48,9 @@ def create():
 def get_post(id, check_author=True):
     post = get_db().execute(
         
-        'SELECT P.id, title, body, created, author_id, username' 
+        'SELECT P.id, title, body, created, author_id, username ' 
 
-        'FROM post P JOIN user U ON P.author_id = U.id' 
+        'FROM post P JOIN user u ON P.author_id = u.id ' 
         'WHERE P.id = ?',
         (id,)).fetchone()
 
